@@ -1,0 +1,4 @@
+flask
+cloudscraper
+gunicorn
+flask-cors
