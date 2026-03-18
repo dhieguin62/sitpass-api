@@ -95,7 +95,9 @@ def consultar_saldo():
             return jsonify({"erro": "Saldo não encontrado"}), 404
 
     except Exception as e:
-        return jsonify({"erro": str(e)}), 500
+    import traceback
+    print("ERRO COMPLETO:", traceback.format_exc())
+    return jsonify({"erro": str(e)}), 500
 
 if __name__ == "__main__":
     app.run(debug=True)
